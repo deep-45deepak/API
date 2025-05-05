@@ -1,8 +1,17 @@
 const express = require('express');
 const path = require('path')
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
+
+// Allow all origins — for development only!
+app.use(cors());
+
+// Or to allow specific origin:
+app.use(cors({
+  origin: 'https://5173-idx-full-app-1746337034808.cluster-iktsryn7xnhpexlu6255bftka4.cloudworkstations.dev'
+}));
 
 const port = parseInt(process.env.PORT) || process.argv[3] || 4041;
 
