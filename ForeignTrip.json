@@ -1,0 +1,586 @@
+[
+    {
+      "id": "F1",
+      "name": "Statue of Liberty",
+      "location": "New York City, USA",
+      "days": 1,
+      "price": 2500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg"
+    },
+    {
+      "id": "F2",
+      "name": "Grand Canyon",
+      "location": "Grand Canyon Village, Arizona, USA",
+      "days": 3,
+      "price": 18000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/679243/pexels-photo-679243.jpeg"
+    },
+    {
+      "id": "F3",
+      "name": "Golden Gate Bridge",
+      "location": "San Francisco, California, USA",
+      "days": 1,
+      "price": 3500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg"
+    },
+    {
+      "id": "F4",
+      "name": "Yosemite National Park",
+      "location": "Yosemite Valley, California, USA",
+      "days": 4,
+      "price": 22000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg"
+    },
+    {
+      "id": "F5",
+      "name": "Walt Disney World",
+      "location": "Orlando, Florida, USA",
+      "days": 5,
+      "price": 45000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg"
+    },
+    {
+      "id": "F6",
+      "name": "Mount Rushmore",
+      "location": "Keystone, South Dakota, USA",
+      "days": 2,
+      "price": 12000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/534297/pexels-photo-534297.jpeg"
+    },
+    {
+      "id": "F7",
+      "name": "Yellowstone National Park",
+      "location": "Yellowstone, Wyoming, USA",
+      "days": 5,
+      "price": 28000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg"
+    },
+    {
+      "id": "F8",
+      "name": "Las Vegas Strip",
+      "location": "Las Vegas, Nevada, USA",
+      "days": 3,
+      "price": 35000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg"
+    },
+    {
+      "id": "F9",
+      "name": "Niagara Falls",
+      "location": "Niagara Falls, New York, USA",
+      "days": 2,
+      "price": 15000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/1659437/pexels-photo-1659437.jpeg"
+    },
+    {
+      "id": "F10",
+      "name": "French Quarter",
+      "location": "New Orleans, Louisiana, USA",
+      "days": 3,
+      "price": 18000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/442579/pexels-photo-442579.jpeg"
+    },
+    {
+      "id": "F11",
+      "name": "Waikiki Beach",
+      "location": "Honolulu, Hawaii, USA",
+      "days": 7,
+      "price": 65000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/1028225/pexels-photo-1028225.jpeg"
+    },
+    {
+      "id": "F12",
+      "name": "Alcatraz Island",
+      "location": "San Francisco, California, USA",
+      "days": 1,
+      "price": 5000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg"
+    },
+    {
+      "id": "F13",
+      "name": "Kennedy Space Center",
+      "location": "Merritt Island, Florida, USA",
+      "days": 2,
+      "price": 12000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/586031/pexels-photo-586031.jpeg"
+    },
+    {
+      "id": "F14",
+      "name": "Great Smoky Mountains",
+      "location": "Gatlinburg, Tennessee, USA",
+      "days": 4,
+      "price": 20000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/15286/pexels-photo.jpg"
+    },
+    {
+      "id": "F15",
+      "name": "Times Square",
+      "location": "New York City, New York, USA",
+      "days": 1,
+      "price": 3000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg"
+    },
+    {
+      "id": "F16",
+      "name": "Denali National Park",
+      "location": "Denali, Alaska, USA",
+      "days": 7,
+      "price": 55000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg"
+    },
+    {
+      "id": "F17",
+      "name": "Savannah Historic District",
+      "location": "Savannah, Georgia, USA",
+      "days": 3,
+      "price": 18000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/53433/savannah-street-historic-architecture-53433.jpeg"
+    },
+    {
+      "id": "F18",
+      "name": "Mall of America",
+      "location": "Bloomington, Minnesota, USA",
+      "days": 2,
+      "price": 15000,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg"
+    },
+    {
+      "id": "F19",
+      "name": "Bryce Canyon",
+      "location": "Bryce, Utah, USA",
+      "days": 3,
+      "price": 20000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/450062/pexels-photo-450062.jpeg"
+    },
+    {
+      "id": "F20",
+      "name": "Mount Rainier",
+      "location": "Ashford, Washington, USA",
+      "days": 4,
+      "price": 22000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg"
+    },
+    {
+      "id": "F21",
+      "name": "Sedona Red Rocks",
+      "location": "Sedona, Arizona, USA",
+      "days": 3,
+      "price": 18000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/618848/pexels-photo-618848.jpeg"
+    },
+    {
+      "id": "F22",
+      "name": "Boston Common",
+      "location": "Boston, Massachusetts, USA",
+      "days": 2,
+      "price": 12000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg"
+    },
+    {
+      "id": "F23",
+      "name": "Mackinac Island",
+      "location": "Mackinac Island, Michigan, USA",
+      "days": 3,
+      "price": 20000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg"
+    },
+    {
+      "id": "F24",
+      "name": "Carlsbad Caverns",
+      "location": "Carlsbad, New Mexico, USA",
+      "days": 2,
+      "price": 15000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg"
+    },
+    {
+      "id": "F25",
+      "name": "Acadia National Park",
+      "location": "Bar Harbor, Maine, USA",
+      "days": 4,
+      "price": 25000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg"
+    },
+    {
+      "id": "F26",
+      "name": "Eiffel Tower",
+      "location": "Paris, France",
+      "days": 2,
+      "price": 30000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg"
+    },
+    {
+      "id": "F27",
+      "name": "Great Wall of China",
+      "location": "Beijing, China",
+      "days": 5,
+      "price": 45000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/2377645/pexels-photo-2377645.jpeg"
+    },
+    {
+      "id": "F28",
+      "name": "Colosseum",
+      "location": "Rome, Italy",
+      "days": 2,
+      "price": 28000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/161039/keyboard-typing-technology-computer-161039.jpeg"
+    },
+    {
+      "id": "F29",
+      "name": "Machu Picchu",
+      "location": "Cusco Region, Peru",
+      "days": 7,
+      "price": 60000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg"
+    },
+    {
+      "id": "F30",
+      "name": "Taj Mahal",
+      "location": "Agra, India",
+      "days": 3,
+      "price": 20000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+    },
+    {
+      "id": "F31",
+      "name": "Pyramids of Giza",
+      "location": "Giza, Egypt",
+      "days": 4,
+      "price": 35000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/71241/pexels-photo-71241.jpeg"
+    },
+    {
+      "id": "F32",
+      "name": "Santorini",
+      "location": "Santorini, Greece",
+      "days": 5,
+      "price": 55000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1028225/pexels-photo-1028225.jpeg"
+    },
+    {
+      "id": "F33",
+      "name": "Sydney Opera House",
+      "location": "Sydney, Australia",
+      "days": 2,
+      "price": 35000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/274910/pexels-photo-274910.jpeg"
+    },
+    {
+      "id": "F34",
+      "name": "Christ the Redeemer",
+      "location": "Rio de Janeiro, Brazil",
+      "days": 3,
+      "price": 40000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/712618/pexels-photo-712618.jpeg"
+    },
+    {
+      "id": "F35",
+      "name": "Petra",
+      "location": "Petra, Jordan",
+      "days": 5,
+      "price": 45000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg"
+    },
+    {
+      "id": "F36",
+      "name": "Angkor Wat",
+      "location": "Siem Reap, Cambodia",
+      "days": 4,
+      "price": 38000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg"
+    },
+    {
+      "id": "F37",
+      "name": "Stonehenge",
+      "location": "Amesbury, United Kingdom",
+      "days": 2,
+      "price": 25000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg"
+    },
+    {
+      "id": "F38",
+      "name": "Banff National Park",
+      "location": "Banff, Canada",
+      "days": 6,
+      "price": 50000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg"
+    },
+    {
+      "id": "F39",
+      "name": "Northern Lights",
+      "location": "Reykjavik, Iceland",
+      "days": 7,
+      "price": 75000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg"
+    },
+    {
+      "id": "F40",
+      "name": "Victoria Falls",
+      "location": "Livingstone, Zambia/Zimbabwe",
+      "days": 5,
+      "price": 60000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg"
+    },
+    {
+      "id": "F41",
+      "name": "Dubai Burj Khalifa",
+      "location": "Dubai, UAE",
+      "days": 4,
+      "price": 65000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/593172/pexels-photo-593172.jpeg"
+    },
+    {
+      "id": "F42",
+      "name": "Bali",
+      "location": "Denpasar, Indonesia",
+      "days": 7,
+      "price": 50000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg"
+    },
+    {
+      "id": "F43",
+      "name": "Venice Canals",
+      "location": "Venice, Italy",
+      "days": 3,
+      "price": 45000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/724532/pexels-photo-724532.jpeg"
+    },
+    {
+      "id": "F44",
+      "name": "Great Barrier Reef",
+      "location": "Queensland, Australia",
+      "days": 5,
+      "price": 55000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg"
+    },
+    {
+      "id": "F45",
+      "name": "Cappadocia",
+      "location": "Göreme, Turkey",
+      "days": 4,
+      "price": 40000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg"
+    },
+    {
+      "id": "F46",
+      "name": "Amalfi Coast",
+      "location": "Amalfi, Italy",
+      "days": 5,
+      "price": 60000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
+    },
+    {
+      "id": "F47",
+      "name": "Matterhorn",
+      "location": "Zermatt, Switzerland",
+      "days": 4,
+      "price": 55000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg"
+    },
+    {
+      "id": "F48",
+      "name": "Patagonia",
+      "location": "Patagonia, Argentina/Chile",
+      "days": 10,
+      "price": 90000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg"
+    },
+    {
+      "id": "F49",
+      "name": "Bora Bora",
+      "location": "Bora Bora, French Polynesia",
+      "days": 7,
+      "price": 120000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg"
+    },
+    {
+      "id": "F50",
+      "name": "Jeju Island",
+      "location": "Jeju, South Korea",
+      "days": 5,
+      "price": 45000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg"
+    },{
+      "id": "INT1",
+      "name": "Paris Romantic Getaway",
+      "location": "Paris, France",
+      "days": 7,
+      "price": 85000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg"
+    },
+    {
+      "id": "INT2",
+      "name": "Bali Island Adventure",
+      "location": "Bali, Indonesia",
+      "days": 6,
+      "price": 45000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg"
+    },
+    {
+      "id": "INT3",
+      "name": "New York City Explorer",
+      "location": "New York, USA",
+      "days": 5,
+      "price": 95000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg"
+    },
+    {
+      "id": "INT4",
+      "name": "Tokyo Cultural Experience",
+      "location": "Tokyo, Japan",
+      "days": 7,
+      "price": 78000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg"
+    },
+    {
+      "id": "INT5",
+      "name": "Sydney Coastal Retreat",
+      "location": "Sydney, Australia",
+      "days": 6,
+      "price": 82000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/1796715/pexels-photo-1796715.jpeg"
+    },
+    {
+      "id": "INT6",
+      "name": "Rome Historical Tour",
+      "location": "Rome, Italy",
+      "days": 4,
+      "price": 65000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/3722818/pexels-photo-3722818.jpeg"
+    },
+    {
+      "id": "INT7",
+      "name": "Cape Town Nature Escape",
+      "location": "Cape Town, South Africa",
+      "days": 8,
+      "price": 72000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg"
+    },
+    {
+      "id": "INT8",
+      "name": "Dubai Luxury Experience",
+      "location": "Dubai, UAE",
+      "days": 5,
+      "price": 110000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
+    },
+    {
+      "id": "INT9",
+      "name": "Swiss Alps Adventure",
+      "location": "Zermatt, Switzerland",
+      "days": 7,
+      "price": 125000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg"
+    },
+    {
+      "id": "INT10",
+      "name": "Santorini Sunset Special",
+      "location": "Santorini, Greece",
+      "days": 6,
+      "price": 98000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/1028225/pexels-photo-1028225.jpeg"
+    },
+    {
+      "id": "INT11",
+      "name": "Maldives Island Paradise",
+      "location": "Maldives",
+      "days": 7,
+      "price": 150000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg"
+    },
+    {
+      "id": "INT12",
+      "name": "Bangkok City Tour",
+      "location": "Bangkok, Thailand",
+      "days": 4,
+      "price": 35000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/3214958/pexels-photo-3214958.jpeg"
+    },
+    {
+      "id": "INT13",
+      "name": "London Royal Experience",
+      "location": "London, UK",
+      "days": 5,
+      "price": 90000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg"
+    },
+    {
+      "id": "INT14",
+      "name": "Singapore City Explorer",
+      "location": "Singapore",
+      "days": 4,
+      "price": 65000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/3152124/pexels-photo-3152124.jpeg"
+    },
+    {
+      "id": "INT15",
+      "name": "Egypt Pyramids Discovery",
+      "location": "Cairo, Egypt",
+      "days": 5,
+      "price": 75000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/71241/pexels-photo-71241.jpeg"
+    }
+  ]

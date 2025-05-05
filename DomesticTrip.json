@@ -1,0 +1,641 @@
+[
+    {
+      "id": "D1",
+      "name": "Manali Adventure",
+      "location": "Manali, Himachal Pradesh",
+      "days": 5,
+      "price": 12000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/939715/pexels-photo-939715.jpeg"
+    },
+    {
+      "id": "D2",
+      "name": "Taj Mahal Sunrise Tour",
+      "location": "Agra, Uttar Pradesh",
+      "days": 2,
+      "price": 4500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+    },
+    {
+      "id": "D3",
+      "name": "Golden Temple Spiritual Journey",
+      "location": "Amritsar, Punjab",
+      "days": 3,
+      "price": 6500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/2363397/pexels-photo-2363397.jpeg"
+    },
+    {
+      "id": "D4",
+      "name": "Historic Delhi Exploration",
+      "location": "Delhi, India",
+      "days": 4,
+      "price": 8500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/3581361/pexels-photo-3581361.jpeg"
+    },
+    {
+      "id": "D5",
+      "name": "Mumbai City Experience",
+      "location": "Mumbai, Maharashtra",
+      "days": 3,
+      "price": 9500,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/3893788/pexels-photo-3893788.jpeg"
+    },
+    {
+      "id": "D6",
+      "name": "Rajasthan Cultural Tour",
+      "location": "Jaipur, Rajasthan",
+      "days": 6,
+      "price": 18000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/2469122/pexels-photo-2469122.jpeg"
+    },
+    {
+      "id": "D7",
+      "name": "Kerala Backwaters Retreat",
+      "location": "Alleppey, Kerala",
+      "days": 4,
+      "price": 12500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275883/pexels-photo-4275883.jpeg"
+    },
+    {
+      "id": "D8",
+      "name": "Goa Beach Vacation",
+      "location": "Goa, India",
+      "days": 5,
+      "price": 15000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275899/pexels-photo-4275899.jpeg"
+    },
+    {
+      "id": "D9",
+      "name": "Ladakh Road Trip",
+      "location": "Leh, Ladakh",
+      "days": 8,
+      "price": 25000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275900/pexels-photo-4275900.jpeg"
+    },
+    {
+      "id": "D10",
+      "name": "Andaman Island Getaway",
+      "location": "Port Blair, Andaman & Nicobar Islands",
+      "days": 6,
+      "price": 22000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275897/pexels-photo-4275897.jpeg"
+    },
+    {
+      "id": "D11",
+      "name": "Varanasi Ganges Experience",
+      "location": "Varanasi, Uttar Pradesh",
+      "days": 3,
+      "price": 7500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/3581360/pexels-photo-3581360.jpeg"
+    },
+    {
+      "id": "D12",
+      "name": "Munnar Tea Estate Stay",
+      "location": "Munnar, Kerala",
+      "days": 3,
+      "price": 9000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275890/pexels-photo-4275890.jpeg"
+    },
+    {
+      "id": "D13",
+      "name": "Shimla Hill Station Tour",
+      "location": "Shimla, Himachal Pradesh",
+      "days": 4,
+      "price": 11000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275891/pexels-photo-4275891.jpeg"
+    },
+    {
+      "id": "D14",
+      "name": "Rann of Kutch Festival",
+      "location": "Kutch, Gujarat",
+      "days": 3,
+      "price": 12000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275886/pexels-photo-4275886.jpeg"
+    },
+    {
+      "id": "D15",
+      "name": "Kashmir Houseboat Stay",
+      "location": "Srinagar, Jammu & Kashmir",
+      "days": 4,
+      "price": 14000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275887/pexels-photo-4275887.jpeg"
+    },
+    {
+      "id": "D16",
+      "name": "Hampi Heritage Walk",
+      "location": "Hampi, Karnataka",
+      "days": 3,
+      "price": 8500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275889/pexels-photo-4275889.jpeg"
+    },
+    {
+      "id": "D17",
+      "name": "Puducherry French Quarter",
+      "location": "Puducherry, India",
+      "days": 3,
+      "price": 9500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275893/pexels-photo-4275893.jpeg"
+    },
+    {
+      "id": "D18",
+      "name": "Khajuraho Temple Tour",
+      "location": "Khajuraho, Madhya Pradesh",
+      "days": 2,
+      "price": 6500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275884/pexels-photo-4275884.jpeg"
+    },
+    {
+      "id": "D19",
+      "name": "Sunderbans Wildlife Safari",
+      "location": "Sunderbans, West Bengal",
+      "days": 4,
+      "price": 13500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275901/pexels-photo-4275901.jpeg"
+    },
+    {
+      "id": "D20",
+      "name": "Ooty Mountain Escape",
+      "location": "Ooty, Tamil Nadu",
+      "days": 3,
+      "price": 10500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275914/pexels-photo-4275914.jpeg"
+    },
+    {
+      "id": "D21",
+      "name": "Ajanta Ellora Caves Exploration",
+      "location": "Aurangabad, Maharashtra",
+      "days": 2,
+      "price": 7000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/3581362/pexels-photo-3581362.jpeg"
+    },
+    {
+      "id": "D22",
+      "name": "Jaisalmer Desert Camp",
+      "location": "Jaisalmer, Rajasthan",
+      "days": 3,
+      "price": 11500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/2469121/pexels-photo-2469121.jpeg"
+    },
+    {
+      "id": "D23",
+      "name": "Hyderabad Heritage & Food Tour",
+      "location": "Hyderabad, Telangana",
+      "days": 3,
+      "price": 9500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/3581364/pexels-photo-3581364.jpeg"
+    },
+    {
+      "id": "D24",
+      "name": "Kanyakumari Sunrise Package",
+      "location": "Kanyakumari, Tamil Nadu",
+      "days": 2,
+      "price": 6000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275904/pexels-photo-4275904.jpeg"
+    },
+    {
+      "id": "D25",
+      "name": "Gir Lion Safari",
+      "location": "Gir, Gujarat",
+      "days": 3,
+      "price": 12500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275905/pexels-photo-4275905.jpeg"
+    },
+    {
+      "id": "D26",
+      "name": "Darjeeling Tea Trail",
+      "location": "Darjeeling, West Bengal",
+      "days": 4,
+      "price": 14500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275913/pexels-photo-4275913.jpeg"
+    },
+    {
+      "id": "D27",
+      "name": "Udaipur Romantic Getaway",
+      "location": "Udaipur, Rajasthan",
+      "days": 4,
+      "price": 16500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/2469123/pexels-photo-2469123.jpeg"
+    },
+    {
+      "id": "D28",
+      "name": "Meghalaya Living Root Bridges",
+      "location": "Cherrapunji, Meghalaya",
+      "days": 5,
+      "price": 18500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275906/pexels-photo-4275906.jpeg"
+    },
+    {
+      "id": "D29",
+      "name": "Konark Temple Visit",
+      "location": "Konark, Odisha",
+      "days": 2,
+      "price": 7500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275888/pexels-photo-4275888.jpeg"
+    },
+    {
+      "id": "D30",
+      "name": "Kodaikanal Lake Retreat",
+      "location": "Kodaikanal, Tamil Nadu",
+      "days": 3,
+      "price": 9500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275914/pexels-photo-4275914.jpeg"
+    },
+    {
+      "id": "D31",
+      "name": "Auroville Meditation Retreat",
+      "location": "Auroville, Tamil Nadu",
+      "days": 5,
+      "price": 12500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275903/pexels-photo-4275903.jpeg"
+    },
+    {
+      "id": "D32",
+      "name": "Bandhavgarh Tiger Safari",
+      "location": "Bandhavgarh, Madhya Pradesh",
+      "days": 4,
+      "price": 19500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275902/pexels-photo-4275902.jpeg"
+    },
+    {
+      "id": "D33",
+      "name": "Kaziranga Rhino Spotting",
+      "location": "Kaziranga, Assam",
+      "days": 4,
+      "price": 17500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275908/pexels-photo-4275908.jpeg"
+    },
+    {
+      "id": "D34",
+      "name": "Mahabalipuram Shore Excursion",
+      "location": "Mahabalipuram, Tamil Nadu",
+      "days": 2,
+      "price": 6500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275909/pexels-photo-4275909.jpeg"
+    },
+    {
+      "id": "D35",
+      "name": "Dharamshala Tibetan Experience",
+      "location": "Dharamshala, Himachal Pradesh",
+      "days": 4,
+      "price": 13500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275910/pexels-photo-4275910.jpeg"
+    },
+    {
+      "id": "D36",
+      "name": "Valley of Flowers Trek",
+      "location": "Valley of Flowers, Uttarakhand",
+      "days": 6,
+      "price": 15500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275913/pexels-photo-4275913.jpeg"
+    },
+    {
+      "id": "D37",
+      "name": "Pangong Lake Camping",
+      "location": "Pangong Lake, Ladakh",
+      "days": 5,
+      "price": 22500,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/4275915/pexels-photo-4275915.jpeg"
+    },
+    {
+      "id": "D38",
+      "name": "Chettinad Heritage Stay",
+      "location": "Chettinad, Tamil Nadu",
+      "days": 3,
+      "price": 11500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275912/pexels-photo-4275912.jpeg"
+    },
+    {
+      "id": "D39",
+      "name": "Golkonda Fort & Sound Show",
+      "location": "Hyderabad, Telangana",
+      "days": 1,
+      "price": 3500,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/4275911/pexels-photo-4275911.jpeg"
+    },
+    {
+      "id": "D40",
+      "name": "Bodh Gaya Meditation",
+      "location": "Bodh Gaya, Bihar",
+      "days": 4,
+      "price": 10500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275894/pexels-photo-4275894.jpeg"
+    },
+    {
+      "id": "D41",
+      "name": "Jog Falls Monsoon Special",
+      "location": "Jog Falls, Karnataka",
+      "days": 2,
+      "price": 7500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275895/pexels-photo-4275895.jpeg"
+    },
+    {
+      "id": "D42",
+      "name": "Chola Temples Circuit",
+      "location": "Thanjavur, Tamil Nadu",
+      "days": 5,
+      "price": 14500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/4275898/pexels-photo-4275898.jpeg"
+    },
+    {
+      "id": "D43",
+      "name": "Nalanda University Ruins Tour",
+      "location": "Nalanda, Bihar",
+      "days": 2,
+      "price": 6500,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/4275896/pexels-photo-4275896.jpeg"
+    },
+    {
+      "id": "D44",
+      "name": "Chittorgarh Fort History Walk",
+      "location": "Chittorgarh, Rajasthan",
+      "days": 2,
+      "price": 7000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/2469124/pexels-photo-2469124.jpeg"
+    },
+    {
+      "id": "D45",
+      "name": "Elephanta Caves Day Trip",
+      "location": "Elephanta Island, Maharashtra",
+      "days": 1,
+      "price": 4000,
+      "rating": 4.3,
+      "image": "https://images.pexels.com/photos/4275916/pexels-photo-4275916.jpeg"
+    },
+    {
+      "id": "D46",
+      "name": "Shillong Waterfalls Tour",
+      "location": "Shillong, Meghalaya",
+      "days": 4,
+      "price": 14500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/4275906/pexels-photo-4275906.jpeg"
+    },
+    {
+      "id": "D47",
+      "name": "Sanchi Stupa Buddhist Trail",
+      "location": "Sanchi, Madhya Pradesh",
+      "days": 2,
+      "price": 7500,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/4275892/pexels-photo-4275892.jpeg"
+    },
+    {
+      "id": "D48",
+      "name": "Mysore Palace Illumination",
+      "location": "Mysore, Karnataka",
+      "days": 2,
+      "price": 8500,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/3581363/pexels-photo-3581363.jpeg"
+    },
+    {
+      "id": "D49",
+      "name": "Chandni Chowk Food Walk",
+      "location": "Delhi, India",
+      "days": 1,
+      "price": 2500,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg"
+    },
+    {
+      "id": "D50",
+      "name": "Brihadeeswarar Temple Darshan",
+      "location": "Thanjavur, Tamil Nadu",
+      "days": 2,
+      "price": 6500,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275907/pexels-photo-4275907.jpeg"
+    },
+    {
+      "id": "D51",
+      "name": "Manali Adventure",
+      "location": "Manali, Himachal Pradesh",
+      "days": 5,
+      "price": 12000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/939715/pexels-photo-939715.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "D52",
+      "name": "Goa Beaches",
+      "location": "Goa, India",
+      "days": 4,
+      "price": 15000,
+      "rating": 4.8,
+      "image": "https://media.istockphoto.com/id/1157048446/photo/aerial-shot-of-the-beach-from-above-showing-sea-beach-mountain-and-a-coconut-plantation-goa.jpg?b=1&s=612x612&w=0&k=20&c=whMcj02iU6qBKt3lA9SrLfwQTKreXm7MH-MO1aoOoak="
+    },
+    {
+      "id": "D53",
+      "name": "Jaipur Heritage",
+      "location": "Jaipur, Rajasthan",
+      "days": 3,
+      "price": 10000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/19149592/pexels-photo-19149592/free-photo-of-patrika-gate-in-jaipur.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "D54",
+      "name": "Kerala Backwaters",
+      "location": "Alleppey, Kerala",
+      "days": 6,
+      "price": 18000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/19743480/pexels-photo-19743480/free-photo-of-the-backwaters-of-kerala-refer-to-a-network-of-interconnected-lakes-rivers-canals-and-lagoons-that-run-parallel-to-the-arabian-sea-coast.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "D55",
+      "name": "Leh-Ladakh Escape",
+      "location": "Leh, Ladakh",
+      "days": 7,
+      "price": 22000,
+      "rating": 5.0,
+      "image": "https://images.pexels.com/photos/879434/pexels-photo-879434.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "D56",
+      "name": "Andaman Island Getaway",
+      "location": "Port Blair, Andaman & Nicobar Islands",
+      "days": 6,
+      "price": 20000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/5057066/pexels-photo-5057066.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "IN1",
+      "name": "Goa Beach Vacation",
+      "location": "Goa, India",
+      "days": 5,
+      "price": 15000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/4275899/pexels-photo-4275899.jpeg"
+    },
+    {
+      "id": "IN2",
+      "name": "Kerala Backwaters Retreat",
+      "location": "Alleppey, Kerala",
+      "days": 4,
+      "price": 18000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/2598639/pexels-photo-2598639.jpeg"
+    },
+    {
+      "id": "IN3",
+      "name": "Taj Mahal Discovery",
+      "location": "Agra, Uttar Pradesh",
+      "days": 2,
+      "price": 8000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+    },
+    {
+      "id": "IN4",
+      "name": "Rajasthan Cultural Tour",
+      "location": "Jaipur, Rajasthan",
+      "days": 6,
+      "price": 25000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg"
+    },
+    {
+      "id": "IN5",
+      "name": "Himalayan Trekking Adventure",
+      "location": "Manali, Himachal Pradesh",
+      "days": 7,
+      "price": 22000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg"
+    },
+    {
+      "id": "IN6",
+      "name": "Varanasi Spiritual Journey",
+      "location": "Varanasi, Uttar Pradesh",
+      "days": 3,
+      "price": 12000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/3580706/pexels-photo-3580706.jpeg"
+    },
+    {
+      "id": "IN7",
+      "name": "Munnar Tea Gardens Tour",
+      "location": "Munnar, Kerala",
+      "days": 4,
+      "price": 15000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg"
+    },
+    {
+      "id": "IN8",
+      "name": "Andaman Island Escape",
+      "location": "Port Blair, Andaman",
+      "days": 5,
+      "price": 35000,
+      "rating": 4.8,
+      "image": "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg"
+    },
+    {
+      "id": "IN9",
+      "name": "Rishikesh Yoga Retreat",
+      "location": "Rishikesh, Uttarakhand",
+      "days": 7,
+      "price": 18000,
+      "rating": 4.6,
+      "image": "https://images.pexels.com/photos/700975/pexels-photo-700975.jpeg"
+    },
+    {
+      "id": "IN10",
+      "name": "Mumbai City Experience",
+      "location": "Mumbai, Maharashtra",
+      "days": 3,
+      "price": 20000,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/3893788/pexels-photo-3893788.jpeg"
+    },
+    {
+      "id": "IN11",
+      "name": "Darjeeling Tea Trail",
+      "location": "Darjeeling, West Bengal",
+      "days": 5,
+      "price": 28000,
+      "rating": 4.7,
+      "image": "https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg"
+    },
+    {
+      "id": "IN12",
+      "name": "Kashmir Valley Tour",
+      "location": "Srinagar, Jammu & Kashmir",
+      "days": 6,
+      "price": 32000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1374295/pexels-photo-1374295.jpeg"
+    },
+    {
+      "id": "IN13",
+      "name": "Puducherry French Quarter",
+      "location": "Puducherry",
+      "days": 4,
+      "price": 18000,
+      "rating": 4.5,
+      "image": "https://images.pexels.com/photos/1262114/pexels-photo-1262114.jpeg"
+    },
+    {
+      "id": "IN14",
+      "name": "Khajuraho Temple Tour",
+      "location": "Khajuraho, Madhya Pradesh",
+      "days": 3,
+      "price": 15000,
+      "rating": 4.4,
+      "image": "https://images.pexels.com/photos/3581363/pexels-photo-3581363.jpeg"
+    },
+    {
+      "id": "IN15",
+      "name": "Ladakh Road Trip",
+      "location": "Leh, Ladakh",
+      "days": 8,
+      "price": 45000,
+      "rating": 4.9,
+      "image": "https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg"
+    }
+  ]
