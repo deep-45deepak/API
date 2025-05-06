@@ -1,9 +1,389 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel API Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .endpoint {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+        .get {
+            background-color: #2ecc71;
+        }
+        .post {
+            background-color: #3498db;
+        }
+        .put {
+            background-color: #f39c12;
+        }
+        .delete {
+            background-color: #e74c3c;
+        }
+        .route {
+            font-family: monospace;
+            font-size: 1.1em;
+            color: #3498db;
+        }
+        .params, .response, .example {
+            margin-top: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #ffd600;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <header>
+        <h1>Travel API Documentation</h1>
+        <p>Version 1.0.0</p>
+    </header>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>The Travel API provides endpoints for accessing travel-related information including domestic and foreign trip preferences, as well as detailed location information. This API is built with Node.js and Express.</p>
+        
+        <h3>Base URL</h3>
+        <p>All endpoints are relative to the base URL of your server. By default, the server runs on:</p>
+        <pre><code>https://api-0p3s.onrender.com/</code></pre>
+        
+        <h3>Authentication</h3>
+        <p>Currently, this API does not require authentication for any endpoints.</p>
+        
+        <h3>CORS Policy</h3>
+        <p>The API is configured with permissive CORS settings:</p>
+        <ul>
+            <li>Origin: * (all domains allowed)</li>
+            <li>Methods: GET, POST, PUT, DELETE</li>
+            <li>Credentials: true</li>
+        </ul>
+    </section>
+
+    <section id="endpoints">
+        <h2>API Endpoints</h2>
+        
+        <div class="endpoint">
+            <h3>Root Endpoint</h3>
+            <p><span class="method get">GET</span> <span class="route">/</span></p>
+            <p>Returns the main index page (rendered with EJS).</p>
+            
+            <div class="response">
+                <h4>Response</h4>
+                <p>HTML page rendered by the EJS template engine.</p>
+            </div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>API Test Endpoint</h3>
+            <p><span class="method get">GET</span> <span class="route">/api</span></p>
+            <p>A simple test endpoint that returns a JSON message.</p>
+            
+            <div class="response">
+                <h4>Response</h4>
+                <pre><code>{
+    "msg": "Hello world"
+}</code></pre>
+            </div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>Domestic Trip Preferences</h3>
+            <p><span class="method get">GET</span> <span class="route">/preferences/domestic-trip</span></p>
+            <p>Returns domestic trip preferences loaded from a JSON file.</p>
+            
+            <div class="response">
+                <h4>Response</h4>
+                <p>JSON data from the DomesticTrip.json file. Example structure:</p>
+                <pre><code>{
+    "preferences": {
+        "transportation": [...],
+        "accommodation": [...],
+        "activities": [...]
+    }
+}</code></pre>
+                
+                <h4>Error Responses</h4>
+                <table>
+                    <tr>
+                        <th>Status Code</th>
+                        <th>Response</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><code>{"error": "Failed to load preferences"}</code></td>
+                        <td>When the file cannot be read</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><code>{"error": "Invalid JSON format"}</code></td>
+                        <td>When the file contains invalid JSON</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>Foreign Trip Preferences</h3>
+            <p><span class="method get">GET</span> <span class="route">/preferences/foreign-trip</span></p>
+            <p>Returns foreign trip preferences loaded from a JSON file.</p>
+            
+            <div class="response">
+                <h4>Response</h4>
+                <p>JSON data from the ForeignTrip.json file. Example structure:</p>
+                <pre><code>{
+    "preferences": {
+        "transportation": [...],
+        "accommodation": [...],
+        "activities": [...],
+        "countries": [...]
+    }
+}</code></pre>
+                
+                <h4>Error Responses</h4>
+                <table>
+                    <tr>
+                        <th>Status Code</th>
+                        <th>Response</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><code>{"error": "Failed to load preferences"}</code></td>
+                        <td>When the file cannot be read</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><code>{"error": "Invalid JSON format"}</code></td>
+                        <td>When the file contains invalid JSON</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>Location Information</h3>
+            <p><span class="method get">GET</span> <span class="route">/location-info</span></p>
+            <p>Returns detailed information about a specific location including coordinates and facilities data from OpenStreetMap.</p>
+            
+            <div class="params">
+                <h4>Query Parameters</h4>
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>city</td>
+                        <td>Yes</td>
+                        <td>The city name to look up</td>
+                    </tr>
+                    <tr>
+                        <td>state</td>
+                        <td>Yes</td>
+                        <td>The state or administrative region</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="response">
+                <h4>Successful Response</h4>
+                <pre><code>{
+    "location": {
+        "city": "New York",
+        "state": "New York",
+        "country": "United States",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+    },
+    "weather": {},
+    "facilities": [
+        {
+            "place_id": 123456789,
+            "licence": "Data © OpenStreetMap contributors",
+            "osm_type": "relation",
+            "osm_id": 175905,
+            "boundingbox": ["40.477399", "40.917577", "-74.259090", "-73.700272"],
+            "lat": "40.7127281",
+            "lon": "-74.0060152",
+            "display_name": "New York, United States",
+            "class": "place",
+            "type": "city",
+            "importance": 0.920843,
+            "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+        }
+    ]
+}</code></pre>
+                
+                <h4>Error Responses</h4>
+                <table>
+                    <tr>
+                        <th>Status Code</th>
+                        <th>Response</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>400</td>
+                        <td><code>{"error": "Both city and state are required"}</code></td>
+                        <td>When required parameters are missing</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td><code>{"error": "Location not found"}</code></td>
+                        <td>When the location cannot be found</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><code>{"error": "Server error", "details": "[error message]"}</code></td>
+                        <td>When there's a server or API error</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="example">
+                <h4>Example Request</h4>
+                <pre><code>GET /location-info?city=New York&state=New York</code></pre>
+            </div>
+            
+            <div class="note">
+                <h4>Implementation Notes</h4>
+                <p>This endpoint makes two external API calls:</p>
+                <ol>
+                    <li>First to Open-Meteo's geocoding API to get coordinates</li>
+                    <li>Then to Nominatim (OpenStreetMap) to get detailed location information</li>
+                </ol>
+                <p>The Nominatim response is returned exactly as received in the "facilities" key.</p>
+                <p><strong>User-Agent Requirement:</strong> Nominatim requires a proper User-Agent header identifying your application.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="server-info">
+        <h2>Server Information</h2>
+        
+        <h3>Configuration</h3>
+        <table>
+            <tr>
+                <th>Port</th>
+                <td>Defaults to 4041, can be set via PORT environment variable or command line argument</td>
+            </tr>
+            <tr>
+                <th>Static Files</th>
+                <td>Served from the <code>public</code> directory</td>
+            </tr>
+            <tr>
+                <th>Views</th>
+                <td>EJS templates located in the <code>views</code> directory</td>
+            </tr>
+        </table>
+        
+        <h3>Dependencies</h3>
+        <ul>
+            <li>express</li>
+            <li>path</li>
+            <li>fs</li>
+            <li>axios</li>
+            <li>cors</li>
+            <li>ejs (for views)</li>
+        </ul>
+    </section>
+
+    <section id="examples">
+        <h2>Usage Examples</h2>
+        
+        <h3>Fetching Domestic Trip Preferences</h3>
+        <pre><code>fetch('https://api-0p3s.onrender.com/preferences/domestic-trip')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));</code></pre>
+        
+        <h3>Getting Location Information</h3>
+        <pre><code>fetch('https://api-0p3s.onrender.com/location-info?city=Paris&state=Ile-de-France')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));</code></pre>
+    </section>
+
+    <section id="error-handling">
+        <h2>Error Handling</h2>
+        <p>The API returns appropriate HTTP status codes along with JSON error messages:</p>
+        <ul>
+            <li><strong>400 Bad Request</strong>: When required parameters are missing</li>
+            <li><strong>404 Not Found</strong>: When a requested resource cannot be found</li>
+            <li><strong>500 Internal Server Error</strong>: For server-side errors with additional details</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2023 Travel API Documentation. All rights reserved.</p>
+    </footer>
 </body>
 </html>
