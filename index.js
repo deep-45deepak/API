@@ -10,7 +10,7 @@ const port = parseInt(process.env.PORT) || process.argv[3] || 4041;
 // CORS
 app.use(cors());
 app.use(cors({
-  origin: 'https://5173-idx-full-app-1746337034808.cluster-iktsryn7xnhpexlu6255bftka4.cloudworkstations.dev',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -61,51 +61,52 @@ app.get('/preferences/foreign-trip', (req, res) => {
   });
 });
 
-// Combined API for Location Info
+
 app.get('/location-info', async (req, res) => {
   const { city, state } = req.query;
 
   if (!city || !state) {
-    return res.status(400).json({ error: "City and state are required" });
+    return res.status(400).json({ error: "Both city and state are required" });
   }
 
   try {
-    const locationName = `${city}, ${state}`;
-
-    // Step 1: Get geocoding info
-    const geoRes = await axios.get(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(locationName)}`);
-    const location = geoRes.data.results?.[0];
-
-    if (!location) {
+    // 1. Get coordinates from Open-Meteo
+    const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`;
+    const geoRes = await axios.get(geoUrl);
+    
+    if (!geoRes.data?.results?.length) {
       return res.status(404).json({ error: "Location not found" });
     }
 
-    const { latitude, longitude, name, country } = location;
+    const { latitude, longitude, name, admin1, country } = geoRes.data.results[0];
 
-    // Step 2: Weather forecast
-    const weatherRes = await axios.get(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,weathercode&timezone=auto`);
+    // 2. Get EXACT Nominatim response
+    const nominatimUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(`${name}, ${admin1}, ${country}`)}`;
+    const nominatimRes = await axios.get(nominatimUrl, {
+      headers: { 'User-Agent': 'YourApp/1.0 (contact@yourdomain.com)' }
+    });
 
-    // Step 3: Facilities via Nominatim
-    const nominatimRes = await axios.get(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(locationName)}`);
-
-    // Combined response
+    // 3. Return raw Nominatim data in 'facilities' key
     res.json({
       location: {
         city: name,
-        state,
+        state: admin1,
         country,
         latitude,
         longitude
       },
-      weather: weatherRes.data.daily,
-      facilities: nominatimRes.data
+      weather: {}, // Your weather data here
+      facilities: nominatimRes.data // Exact Nominatim response
     });
 
   } catch (error) {
-    console.error("Error in /location-info:", error);
-    res.status(500).json({ error: "Something went wrong" });
+    res.status(500).json({ 
+      error: "Server error",
+      details: error.message 
+    });
   }
 });
+
 
 // Start server
 app.listen(port, () => {
