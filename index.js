@@ -3,19 +3,34 @@ const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+const morgan = require('morgan'); // logging middleware
 
 const app = express();
 const port = parseInt(process.env.PORT) || process.argv[3] || 4041;
 
-// CORS
-app.use(cors());
+// Logger middleware
+app.use(morgan('dev'));
+
+// Use only one CORS configuration
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
-// Static files & Views
+// Rate limiter: 10 requests per day per IP
+const limiter = rateLimit({
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours
+  max: 10,
+  message: 'You have exceeded the 10 requests per day limit!',
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use(limiter);
+
+// Static files and views
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
    .set('view engine', 'ejs');
@@ -32,7 +47,7 @@ app.get('/api', (req, res) => {
 app.get('/preferences/domestic-trip', (req, res) => {
   fs.readFile('./DomesticTrip.json', 'utf8', (err, data) => {
     if (err) {
-      console.error("Error reading file:", err);
+      console.error("Error reading DomesticTrip.json:", err);
       return res.status(500).json({ error: 'Failed to load preferences' });
     }
     try {
@@ -48,7 +63,7 @@ app.get('/preferences/domestic-trip', (req, res) => {
 app.get('/preferences/foreign-trip', (req, res) => {
   fs.readFile('./ForeignTrip.json', 'utf8', (err, data) => {
     if (err) {
-      console.error("Error reading file:", err);
+      console.error("Error reading ForeignTrip.json:", err);
       return res.status(500).json({ error: 'Failed to load preferences' });
     }
     try {
@@ -61,7 +76,7 @@ app.get('/preferences/foreign-trip', (req, res) => {
   });
 });
 
-
+// Updated working weather & location info route
 app.get('/location-info', async (req, res) => {
   const { city, state } = req.query;
 
@@ -70,23 +85,23 @@ app.get('/location-info', async (req, res) => {
   }
 
   try {
-    // 1. Get coordinates from Open-Meteo
     const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`;
     const geoRes = await axios.get(geoUrl);
-    
+
     if (!geoRes.data?.results?.length) {
       return res.status(404).json({ error: "Location not found" });
     }
 
     const { latitude, longitude, name, admin1, country } = geoRes.data.results[0];
 
-    // 2. Get EXACT Nominatim response
     const nominatimUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(`${name}, ${admin1}, ${country}`)}`;
     const nominatimRes = await axios.get(nominatimUrl, {
       headers: { 'User-Agent': 'YourApp/1.0 (contact@yourdomain.com)' }
     });
 
-    // 3. Return raw Nominatim data in 'facilities' key
+    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&timezone=auto`;
+    const weatherRes = await axios.get(weatherUrl);
+
     res.json({
       location: {
         city: name,
@@ -95,11 +110,12 @@ app.get('/location-info', async (req, res) => {
         latitude,
         longitude
       },
-      weather: {}, // Your weather data here
-      facilities: nominatimRes.data // Exact Nominatim response
+      weather: weatherRes.data?.daily || {},
+      facilities: nominatimRes.data
     });
 
   } catch (error) {
+    console.error("Error in /location-info:", error.message);
     res.status(500).json({ 
       error: "Server error",
       details: error.message 
@@ -107,8 +123,7 @@ app.get('/location-info', async (req, res) => {
   }
 });
 
-
 // Start server
 app.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}`);
+  console.log(`✅ Server is running at http://localhost:${port}`);
 });
