@@ -96,7 +96,7 @@ app.get('/location-info', async (req, res) => {
 
     const nominatimUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(`${name}, ${admin1}, ${country}`)}`;
     const nominatimRes = await axios.get(nominatimUrl, {
-      headers: { 'User-Agent': 'YourApp/1.0 (contact@yourdomain.com)' }
+      headers: { 'User-Agent': 'TripPlanner/1.0 (dpk.41deep@gmail.com)' }
     });
 
     const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&timezone=auto`;
