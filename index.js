@@ -40,7 +40,7 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
-app.use(limiter);
+// app.use(limiter);
 
 // Static files and views
 app.use(express.static(path.join(__dirname, 'public')))
