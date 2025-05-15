@@ -116,6 +116,6 @@ This project is open for educational and personal use. Please credit the public 
 
 **Deepak Kumar**  
 🚀 B.Tech CSE | Backend Developer | Travel Tech Enthusiast  
-📧 `deepak.kumar123@gmail.com`
+📧 `dpk.41deep@gmail.com`
 
 ---
