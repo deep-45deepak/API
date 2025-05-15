@@ -4,25 +4,37 @@ const fs = require('fs');
 const axios = require('axios');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
-const morgan = require('morgan'); // logging middleware
+const morgan = require('morgan');
 
 const app = express();
 const port = parseInt(process.env.PORT) || process.argv[3] || 4041;
 
+const allowedUnlimitedOrigin = 'https://5173-idx-test-1746513538955.cluster-xpmcxs2fjnhg6xvn446ubtgpio.cloudworkstations.dev/';
+
 // Logger middleware
 app.use(morgan('dev'));
 
-// Use only one CORS configuration
+// CORS middleware
 app.use(cors({
-  origin: '*',
+  origin: function (origin, callback) {
+    if (!origin || origin === allowedUnlimitedOrigin) {
+      callback(null, true);
+    } else {
+      callback(null, true); // Still allow other origins but they'll be rate-limited
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
-// Rate limiter: 10 requests per day per IP
+// Dynamic rate limiter
 const limiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  max: 10,
+  max: (req, res) => {
+    // Allow unlimited access for the specific origin
+    if (req.headers.origin === allowedUnlimitedOrigin) return 0;
+    return 10; // All others limited to 10 requests per day
+  },
   message: 'You have exceeded the 10 requests per day limit!',
   standardHeaders: true,
   legacyHeaders: false,
@@ -76,7 +88,7 @@ app.get('/preferences/foreign-trip', (req, res) => {
   });
 });
 
-// Updated working weather & location info route
+// Weather & location info route
 app.get('/location-info', async (req, res) => {
   const { city, state } = req.query;
 
